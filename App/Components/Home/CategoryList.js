@@ -5,10 +5,10 @@ import {
   FlatList,
   TouchableOpacity,
 } from "react-native";
-import React from "react";
+import React, { useState } from "react";
 import CategoryItem from "./CategoryItem";
 
-export default function CategoryList() {
+export default function CategoryList({ setSelectedCategory }) {
   const categoryList = [
     {
       id: 1,
@@ -38,9 +38,9 @@ export default function CategoryList() {
         horizontal={true}
         showsHorizontalScrollIndicator={false}
         renderItem={({ item }) => (
-          <TouchableOpacity onPress={() => console.log(item.name)}>
+          <TouchableOpacity onPress={() => setSelectedCategory(item.value)}>
             <CategoryItem category={item} />
-          </TouchableOpacity> 
+          </TouchableOpacity>
         )}
       />
     </View>

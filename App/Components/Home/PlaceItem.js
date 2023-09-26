@@ -6,7 +6,7 @@ import Colors from "../../Shared/Colors";
 export default function PlaceItem({ place }) {
   return (
     <View style={styles.arrange}>
-      <Image
+     {place?.photos ?  <Image
         style={styles.image}
         source={{
           uri:
@@ -16,7 +16,9 @@ export default function PlaceItem({ place }) {
             place?.photos[0]?.photo_reference +
             "&key=AIzaSyBadLZxZ3YM8lxQctCq9uhvYCmYBfnk7rY",
         }}
-      />
+      />  : null
+     
+     }
       <View style={{ flex: 1 }}>
         <Text style={styles.name} numberOfLines={2}>
           {place.name}
