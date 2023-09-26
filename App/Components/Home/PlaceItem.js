@@ -8,7 +8,14 @@ export default function PlaceItem({ place }) {
     <View style={styles.arrange}>
       <Image
         style={styles.image}
-        source={require("./../../../assets/placeholder.jpg")}
+        source={{
+          uri:
+            "https://maps.googleapis.com/maps/api/place/photo" +
+            "?maxwidth=400" +
+            "&photo_reference=" +
+            place?.photos[0]?.photo_reference +
+            "&key=AIzaSyBadLZxZ3YM8lxQctCq9uhvYCmYBfnk7rY",
+        }}
       />
       <View style={{ flex: 1 }}>
         <Text style={styles.name} numberOfLines={2}>
@@ -49,7 +56,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     gap: 10,
     marginBottom: 10,
-    marginTop: 2
+    marginTop: 2,
   },
   rating: {
     display: "flex",
