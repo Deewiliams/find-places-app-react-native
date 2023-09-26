@@ -4,7 +4,7 @@ import Header from "../Components/Home/Header";
 
 export default function Home() {
   return (
-    <View>
+    <View style={{padding: 20}}>
       <Header />
     </View>
   );
