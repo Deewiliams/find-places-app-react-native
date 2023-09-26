@@ -1,6 +1,7 @@
 import { View, Text, StyleSheet, FlatList } from "react-native";
 import React from "react";
 import PlaceItem from "./PlaceItem";
+import PlaceItemBig from "./PlaceItemBig";
 
 export default function PlaceList({ placeList }) {
   return (
@@ -9,9 +10,9 @@ export default function PlaceList({ placeList }) {
 
       <FlatList
         data={placeList}
-        renderItem={({ item }) => (
-         <PlaceItem place={item} />
-        )}
+        renderItem={({ item, index }) =>
+          index % 4 == 0 ? <PlaceItemBig place={item} /> : <PlaceItem place={item} />
+        }
       />
     </View>
   );
