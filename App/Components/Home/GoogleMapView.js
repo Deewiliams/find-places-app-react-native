@@ -10,7 +10,7 @@ export default function GoogleMapView() {
     longitudeDeltal: 0.0421,
   });
   return (
-    <View style={{ marginTop: 20 }}>
+    <View style={{ marginTop: 20, borderRadius: 20, overflow: "hidden" }}>
       <MapView
         style={styles.map}
         provider={PROVIDER_GOOGLE}
