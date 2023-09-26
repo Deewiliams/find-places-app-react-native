@@ -25,7 +25,7 @@ export default function GoogleMapView() {
   return (
     <View style={{ marginTop: 20, borderRadius: 20}}>
      <View>
-     <Text style={{fontSize: 20, marginBottom: 10, fontWeight: "600"}}>
+     <Text style={{fontSize: 20, marginBottom: 10, fontWeight: "600", fontFamily: "Raleway-bold"}}>
       Top near by places
     </Text>
      </View>
