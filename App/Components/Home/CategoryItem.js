@@ -29,6 +29,8 @@ const styles = StyleSheet.create({
     margin: 8,
     width: 100,
     height: 100, 
-    backgroundColor:Colors.GRAY
+    backgroundColor:Colors.GRAY,
+    justifyContent: "center",
+    borderRadius: 15
   }
 });

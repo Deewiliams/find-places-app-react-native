@@ -1,4 +1,10 @@
-import { View, Text, StyleSheet, FlatList } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  FlatList,
+  TouchableOpacity,
+} from "react-native";
 import React from "react";
 import CategoryItem from "./CategoryItem";
 
@@ -30,10 +36,11 @@ export default function CategoryList() {
       <FlatList
         data={categoryList}
         horizontal={true}
+        showsHorizontalScrollIndicator={false}
         renderItem={({ item }) => (
-          <View>
+          <TouchableOpacity onPress={() => console.log(item.name)}>
             <CategoryItem category={item} />
-          </View>
+          </TouchableOpacity> 
         )}
       />
     </View>
