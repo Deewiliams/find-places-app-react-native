@@ -1,5 +1,6 @@
 import { View, Text, Image, StyleSheet } from "react-native";
 import React from "react";
+import Colors from "../../Shared/Colors";
 
 export default function CategoryItem({ category }) {
   return (
@@ -25,8 +26,9 @@ const styles = StyleSheet.create({
   {
     padding: 5,
     alignItems: "center",
-    margin: 5,
+    margin: 8,
     width: 100,
-    height: 100,
+    height: 100, 
+    backgroundColor:Colors.GRAY
   }
 });
