@@ -12,7 +12,7 @@ export default function PlaceItem({ place }) {
           uri:
             "https://maps.googleapis.com/maps/api/place/photo" +
             "?maxwidth=400" +
-            "&photo_reference=" +
+            "&photo_reference=" + 
             place?.photos[0]?.photo_reference +
             "&key=AIzaSyBadLZxZ3YM8lxQctCq9uhvYCmYBfnk7rY",
         }}
