@@ -27,7 +27,7 @@ export default function GoogleMapView() {
             fontSize: 20,
             marginBottom: 10,
             fontWeight: "600",
-            fontFamily: "Raleway-bold",
+            fontFamily: "raleway-bold",
           }}
         >
           Top near by places
