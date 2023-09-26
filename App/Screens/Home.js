@@ -4,6 +4,7 @@ import Header from "../Components/Home/Header";
 import GoogleMapView from "../Components/Home/GoogleMapView";
 import CategoryList from "../Components/Home/CategoryList";
 import GlabalApi from "../Services/GlabalApi";
+import PlaceList from "../Components/Home/PlaceList";
 
 export default function Home() {
   const [placeList, setPlaceList] = useState([]);
@@ -23,6 +24,7 @@ export default function Home() {
       <Header />
       <GoogleMapView />
       <CategoryList />
+      {placeList ? <PlaceList placeList={placeList} /> : null}
     </View>
   );
 }
