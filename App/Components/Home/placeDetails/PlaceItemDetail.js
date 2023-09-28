@@ -39,7 +39,7 @@ const PlaceItemDetail = ({ place }) => {
       ) : null}
 
       <Text style={styles.vicinity} numberOfLines={2}>
-        {place.vicinity}
+        {place?.vicinity}
       </Text>
     </View>
   );
@@ -51,6 +51,7 @@ const styles = StyleSheet.create({
   vicinity: {
     fontSize: 18,
     marginBottom: 5,
-    color: Colors.GRAY,
+    color: "black",
+    marginTop: 10
   },
 });
