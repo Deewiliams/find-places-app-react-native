@@ -25,7 +25,7 @@ export default function Home() {
   return (
     <ScrollView style={{ padding: 20 }}>
       <Header />
-      <GoogleMapView />
+      <GoogleMapView placeList={placeList} />
       <CategoryList  setSelectedCategory={(value)=>GetNearByPlace(value)} />
       {placeList ? <PlaceList placeList={placeList} /> : null}
     </ScrollView>
