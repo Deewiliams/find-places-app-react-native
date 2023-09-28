@@ -1,6 +1,6 @@
 import { NavigationContainer } from "@react-navigation/native";
 // import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View,SafeAreaView } from "react-native";
 import TabNavigation from "./App/Navigations/TabNavigation";
 import { useEffect, useState } from "react";
 import * as Location from "expo-location";
@@ -31,13 +31,13 @@ export default function App() {
   }, []); 
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <UserLocationContext.Provider value={{ location, setLocation }}>
         <NavigationContainer>
           <TabNavigation />
         </NavigationContainer>
       </UserLocationContext.Provider>
-    </View>
+    </SafeAreaView>
   );
 }
 
