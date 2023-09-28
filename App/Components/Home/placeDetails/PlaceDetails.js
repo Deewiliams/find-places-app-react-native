@@ -1,17 +1,20 @@
 import React, { useEffect, useState } from "react";
 import { useRoute } from "@react-navigation/native";
 import PlaceItemDetail from "./PlaceItemDetail";
+import { View } from "react-native";
 
 const PlaceDetails = () => {
   const param = useRoute().params;
   const [place, setPlace] = useState();
   useEffect(() => {
     setPlace(param.place);
-    console.log("params", param.place);
   }, []);
 
-  return <PlaceItemDetail place={place} />;
+  return (
+    <View style={{padding:20,backgroundColor: "white", flex:1}}>
+      <PlaceItemDetail place={place} />
+    </View>
+  );
 };
 
 export default PlaceDetails;
-
