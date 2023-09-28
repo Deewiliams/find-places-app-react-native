@@ -1,14 +1,17 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import React, { useEffect, useState } from "react";
+import { useRoute } from "@react-navigation/native";
+import PlaceItemDetail from "./PlaceItemDetail";
 
 const PlaceDetails = () => {
-  return (
-    <View>
-      <Text>PlaceDetails</Text>
-    </View>
-  )
-}
+  const param = useRoute().params;
+  const [place, setPlace] = useState();
+  useEffect(() => {
+    setPlace(param.place);
+    console.log("params", param.place);
+  }, []);
 
-export default PlaceDetails
+  return <PlaceItemDetail place={place} />;
+};
 
-const styles = StyleSheet.create({})
+export default PlaceDetails;
+

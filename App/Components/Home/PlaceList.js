@@ -11,11 +11,10 @@ import PlaceItemBig from "./PlaceItemBig";
 import { useNavigation } from "@react-navigation/native";
 
 export default function PlaceList({ placeList }) {
-
-  const navigator = useNavigation()
+  const navigator = useNavigation();
   const onPlaceClick = (item) => {
-navigator.navigate("place-detail")
-  }
+    navigator.navigate("place-detail", { place: item });
+  };
   return (
     <View>
       <Text style={styles.tite}>Found {placeList.length} places</Text>
