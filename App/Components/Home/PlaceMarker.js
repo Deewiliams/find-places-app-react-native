@@ -1,4 +1,3 @@
-import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { Marker } from "react-native-maps";
 
@@ -18,4 +17,4 @@ const PlaceMarker = ({ item }) => {
 
 export default PlaceMarker;
 
-const styles = StyleSheet.create({});
+
