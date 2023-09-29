@@ -17,7 +17,7 @@ export default function PlaceList({ placeList }) {
   };
   return (
     <View>
-      <Text style={styles.tite}>Found {placeList.length} places</Text>
+      <Text style={styles.tite}>Found {placeList?.length} places</Text>
 
       <FlatList
         data={placeList}
